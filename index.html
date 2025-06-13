@@ -2,73 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyecto Final - Sistemas Operativos Grupo 6</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-    }
-
-    nav {
-      background-color: #292929;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 4px #000;
-    }
-
-    nav a {
-      color: #8ab4f8;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      color: #90caf9;
-    }
-
-    pre {
-      background-color: #2b2b2b;
-      color: #ffffff;
-      padding: 10px;
-      overflow-x: auto;
-      border-radius: 5px;
-    }
-
-    img {
-      max-width: 100%;
-      border: 1px solid #444;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-
-    a {
-      color: #8ab4f8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888;
-    }
-  </style>
+  <title>Proyecto Final - Sistemas Operativos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -82,7 +17,7 @@
 
   <section id="portada">
     <h1>Proyecto Final - Sistemas Operativos</h1>
-    <p><strong>Nombres:</strong> [Tu nombre]<br>
+    <p><strong>Nombre:</strong> [Tu nombre]<br>
        <strong>Grupo:</strong> 6</p>
 
     <h2>Portada</h2>
@@ -94,17 +29,11 @@
 
     <h3>Instalación de OpenSUSE (Gráfico)</h3>
     <img src="img/opensuse_instalacion.png" alt="OpenSUSE">
-    <p>Se instaló OpenSUSE Tumbleweed con entorno gráfico y se configuraron navegadores y editores.</p>
+    <p>Se instaló OpenSUSE Tumbleweed con entorno gráfico, navegadores y editores de código.</p>
 
     <h3>Instalación de Ubuntu Server (Consola)</h3>
     <img src="img/ubuntu_server.png" alt="Ubuntu Server">
-    <p>Se instaló Ubuntu Server en entorno consola y se configuraron herramientas básicas.</p>
-
-    <h3>Editores de Texto</h3>
-    <ul>
-      <li>Nano</li>
-      <li>Vim</li>
-    </ul>
+    <p>Ubuntu Server fue instalado en modo consola y se configuraron herramientas como make, curl, git y rsync.</p>
   </section>
 
   <section id="scripts">
@@ -138,7 +67,7 @@ RUN apt update && apt install -y vim nano curl git
 CMD ["bash"]
     </pre>
 
-    <h3>Ejecución de contenedor</h3>
+    <h3>Ejecución del contenedor</h3>
     <img src="img/docker_ejecucion.png" alt="Docker ejecución">
 
     <h3>Kubernetes</h3>
@@ -147,7 +76,7 @@ CMD ["bash"]
 
   <section id="video">
     <h2>Video de Presentación</h2>
-    <p><a href="https://drive.google.com/drive/u/1/folders/192TaSIu2i_loyuImyuiYZDV0-SUKy0aA">Ver presentación en Google Drive</a></p>
+    <p><a href="https://drive.google.com/tu-video">Ver presentación en Google Drive</a></p>
   </section>
 
   <footer>
