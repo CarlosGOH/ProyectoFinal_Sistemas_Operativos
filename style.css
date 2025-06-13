@@ -75,7 +75,6 @@ inicio h2::after {
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #f72585, #b5179e);
   border-radius: 3px;
 }
 
