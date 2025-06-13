@@ -28,9 +28,20 @@ nav a:hover {
 }
 
 section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
+  background-color: #252525;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border-left: 4px solid #8ab4f8;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  border-left-color: #90caf9;
 }
 
 h1, h2 {
