@@ -75,9 +75,22 @@ echo "Actualización completada."
 
     <h3>Dockerfile</h3>
     <pre>
-FROM ubuntu:latest
-RUN apt update && apt install -y vim nano curl git
-CMD ["bash"]
+# imagen base
+FROM ubuntu:20.04
+
+# evitar prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+#actualizar e instalar herramientas
+RUN apt update && apt install -y \
+    vim \
+    nano \
+    curl \
+    wget
+
+# comando por defecto
+CMD ["sleep", "infinity"]
+
     </pre>
 
     <h3>Ejecución del contenedor</h3>
