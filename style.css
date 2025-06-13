@@ -90,12 +90,28 @@ footer {
 .galeria {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.galeria figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0;
 }
 
 .galeria img {
-  width: 200px;
+  width: 100%;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.galeria figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
 }
 
