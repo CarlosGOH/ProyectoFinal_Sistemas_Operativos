@@ -50,11 +50,25 @@ h1, h2 {
 
 pre {
   background-color: #2b2b2b;
-  color: #ffffff;
-  padding: 10px;
+  color: #f8f8f2;
+  padding: 20px;
   overflow-x: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  border-left: 4px solid #8ab4f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+  position: relative;
+  transition: all 0.3s ease;
+  counter-reset: line;
 }
+
+pre:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-left-color: #90caf9;
+}
+
 
 img {
   max-width: 100%;
