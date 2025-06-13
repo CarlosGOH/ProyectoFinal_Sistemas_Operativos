@@ -152,13 +152,20 @@ RUN apt update && apt install -y \
 CMD ["sleep", "infinity"]
   </pre>
   <div class="galeria">
-   <p>Creo la carpeta que contendra el archivo dockerfile</p>
+    
+   <p>Primero creamos la carpeta que contendra el archivo Dockerfile</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/1.jpg" alt="Creacion de carpeta que contiene el dockerfile">
+    <p>Creamos el archivo Dockerfile dentro de la carpeta</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/2.jpg" alt="Creacion de DockerFile">
+    <p>Agregamos nuestro contenido al archivo, este usa como base ubuntu:20.04. Evita preguntas interactivas al instalar, instala vim, nano, curl y wget. Deja el contenedor corriendo sin fin con sleep infinity.</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/3.png" alt="Contenido DockerFile">
+    <p>Copiamos la ruta del archivo</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/4.jpg" alt="Copia de ruta del archivo">
+    <p>Dentro del cmd ponemos la ruta que copiamos</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/5.jpg" alt="Ruta en terminal">
+    <p>Con con el comando docker build -t (nombre) . creamos una imagen docker usando el Dockerfile en el directorio actual</p>
     <img src="DriveArchivos/Punto 4/4.2 Creacion de Imagen Docker IMG/6.jpg" alt="Creacion de la imagen">
+    <p>Con esto tendriamos nuestra imagen en Desktop y pasariamos a la creacion de un contenedor</p>
   </div>
 
   <h3>4.3 Creación de contenedor</h3>
@@ -175,10 +182,12 @@ CMD ["sleep", "infinity"]
     Tu navegador no soporta la etiqueta de video.
   </video>
   <img src="DriveArchivos/Punto 5/5.1 Demostracion Office.png" alt="Resultado de imagen modificada">
+  <p>Una vez ejecutadas las lineas de codigo de la anterior imagen queda en evidencia el uso de la nueva herramientas instalada.</p>
 
   <h3>5.2 Publicación en Docker Hub</h3>
-  <p>La imagen modificada fue subida a Docker Hub y se encuentra disponible públicamente.</p>
+  <p>Para poder publicar hacemos uso de las siguientes lineas de codigo.</p>
   <img src="DriveArchivos/Punto 5/5.2 Publicación en Docker Hub.png" alt="Docker Hub publicación">
+  <p>Enlace al repositorio: https://hub.docker.com/repository/docker/justbrayan/ult_img_proyecto_final/general </p>
 
   <h3>6.1 Instalación de Kubernetes en Docker Desktop</h3>
   <p>Se habilitó Kubernetes desde Docker Desktop y se verificó su correcto funcionamiento.</p>
@@ -186,17 +195,38 @@ CMD ["sleep", "infinity"]
     <source src="DriveArchivos/Punto 6 Real/6.1.1 NUEVO Instalación Kubernete.mp4" type="video/mp4">
     Tu navegador no soporta la etiqueta de video.
   </video>
+  <p>Verificamos instalacion con la version Kubernet</p>
   <img src="DriveArchivos/Punto 6 Real/6.1 Kubernete instalado.png" alt="Versión de Kubernetes instalada">
 
   <h3>6.2 Creación y ejecución de un pod</h3>
   <p>Se creó un pod que ejecuta la imagen personalizada de Linux, verificando su correcta ejecución.</p>
   <div class="galeria">
+    <p>Primero creamos la carpeta que contendra nuestro archivo .yaml .</p>
     <img src="DriveArchivos/Punto 6 Real/6.2 Creacion Pod IMG/1.png" alt="kubectl crear carpeta">
+    <p>Creamos nuestro archivo .yaml el con el siguiente contenido. Este archivo le dice a Kubernetes que cree un pod usando la imagen personalizada.</p>
     <img src="DriveArchivos/Punto 6 Real/6.2 Creacion Pod IMG/2.png" alt="kubectl apply">
+    <pre>
+# Archivo usado:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podproyecto
+spec:
+  containers:
+  - name: contenedor-desarrollo
+    image: justbrayan/ult_img_proyecto_final:latest
+    ports:
+    - containerPort: 80
+    command: ["sleep", "infinity"]
+  </pre>
+    <p>Copiamos la ruta del archivo.</p>
     <img src="DriveArchivos/Punto 6 Real/6.2 Creacion Pod IMG/3.png" alt="Pod creado">
+    <p>Ingresamos a la ruta desde la terminal de Docker Desktop.</p>
     <img src="DriveArchivos/Punto 6 Real/6.2 Creacion Pod IMG/4.png" alt="kubectl get pods">
+    <p>Ejecutamos el pod con kubectl. Esto crea el pod en el clúster de Kubernetes. Con kubectl get pods verificamos el estado del pod </p>
     <img src="DriveArchivos/Punto 6 Real/6.2 Creacion Pod IMG/5.png" alt="kubectl describe">
   </div>
+  <p>Comprobamos su funcionamiento.</p>
   <video controls width="640">
     <source src="DriveArchivos/Punto 6 Real/6.2.1 NUEVO Funcionamiento.mp4" type="video/mp4">
     Tu navegador no soporta la etiqueta de video.
