@@ -84,11 +84,20 @@ chmod +x nombre_del_script.sh
       </pre>
   </section>
 
-  <section id="docker">
-    <h2>Docker y Kubernetes</h2>
+<section id="docker">
+  <h2>Docker y Kubernetes</h2>
 
-    <h3>Dockerfile</h3>
-    <pre>
+  <h3>4.1 Instalación de Docker Desktop</h3>
+  <p>Se realizó la instalación correcta de Docker Desktop, asegurando que todas las dependencias estén presentes.</p>
+  <video controls width="640">
+    <source src="DriveArchivos/Punto 4/punto4-1.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+
+  <h3>4.2 Creación de imagen Docker</h3>
+  <p>Se creó una imagen funcional basada en Ubuntu 20.04 que incluye aplicaciones como Vim, Nano, Curl, etc.</p>
+  <pre>
+# Dockerfile usado:
 # imagen base
 FROM ubuntu:20.04
 
@@ -104,15 +113,62 @@ RUN apt update && apt install -y \
 
 # comando por defecto
 CMD ["sleep", "infinity"]
+  </pre>
+  <div class="galeria">
+    <img src="DriveArchivos/Punto 4/4.2_img1.png" alt="Dockerfile editado">
+    <img src="img/4.2_img2.png" alt="Instalación de herramientas">
+    <img src="img/4.2_img3.png" alt="Verificación de imagen">
+    <img src="img/4.2_img4.png" alt="Creación exitosa">
+    <img src="img/4.2_img5.png" alt="Ejecución en terminal">
+    <img src="img/4.2_img6.png" alt="Aplicaciones instaladas">
+  </div>
+  <video controls width="640">
+    <source src="DriveArchivos/Punto 4/4.2_video_creacion_imagen.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
 
-    </pre>
+  <h3>4.3 Creación de contenedor</h3>
+  <p>Se ejecutó un contenedor con la imagen personalizada, verificando su funcionalidad.</p>
+  <video controls width="640">
+    <source src="DriveArchivos/punto4/4.3_video_contenedor.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
 
-    <h3>Ejecución del contenedor</h3>
-    <img src="img/docker_ejecucion.png" alt="Docker ejecución">
+  <h3>5.1 Modificación de imagen</h3>
+  <p>Se modificó la imagen para agregar herramientas ofimáticas y entornos adicionales.</p>
+  <video controls width="640">
+    <source src="DriveArchivos/punto5/5.1_video_modificacion.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+  <img src="img/5.1_modificacion_resultado.png" alt="Resultado de imagen modificada">
 
-    <h3>Kubernetes</h3>
-    <img src="img/kubernetes_pod.png" alt="Pod en ejecución">
-  </section>
+  <h3>5.2 Publicación en Docker Hub</h3>
+  <p>La imagen modificada fue subida a Docker Hub y se encuentra disponible públicamente.</p>
+  <img src="img/5.2_dockerhub.png" alt="Docker Hub publicación">
+
+  <h3>6.1 Instalación de Kubernetes en Docker Desktop</h3>
+  <p>Se habilitó Kubernetes desde Docker Desktop y se verificó su correcto funcionamiento.</p>
+  <video controls width="640">
+    <source src="DriveArchivos/punto6/6.1_video_kubernetes.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+  <img src="img/6.1_kubernetes_version.png" alt="Versión de Kubernetes instalada">
+
+  <h3>6.2 Creación y ejecución de un pod</h3>
+  <p>Se creó un pod que ejecuta la imagen personalizada de Linux, verificando su correcta ejecución.</p>
+  <div class="galeria">
+    <img src="img/6.2_img1.png" alt="YAML del pod">
+    <img src="img/6.2_img2.png" alt="kubectl apply">
+    <img src="img/6.2_img3.png" alt="Pod creado">
+    <img src="img/6.2_img4.png" alt="kubectl get pods">
+    <img src="img/6.2_img5.png" alt="kubectl describe">
+    <img src="img/6.2_img6.png" alt="kubectl exec">
+  </div>
+  <video controls width="640">
+    <source src="DriveArchivos/punto6/6.2_video_pod.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+</section>
 
   <section id="video">
     <h2>Video de Presentación</h2>
